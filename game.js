@@ -72,5 +72,12 @@ function checkAnswer(currentlevel) {
             $('body').removeClass('game-over');
         }, 200);
         $('h1').text("Game Over! Press any key to restart");
+        startOver();
     }
+}
+
+function startOver() {
+    level = 0;
+    gamePattern = [];
+    start = false;
 }
