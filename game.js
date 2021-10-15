@@ -14,6 +14,15 @@ function flushTheButton(color) {
     $("#" + color).fadeIn(100).fadeOut(100).fadeIn(100);
 }
 
+function pressedButton(name) {
+    $('#' + name).addClass('pressed');
+
+    setTimeout(function() {
+        $('#' + name).removeClass('pressed');
+    }, 100);
+}
+
+
 function playSound(color) {
     let audio = new Audio('./sounds/' + color + '.mp3');
     audio.play();
@@ -22,6 +31,7 @@ function playSound(color) {
 $('.btn').click(function() {
     let userChosenColor = this.id;
     userClickedPattern.push(userChosenColor);
-    flushTheButton(userChosenColor);
+    pressedButton(userChosenColor);
     playSound(userChosenColor);
 })
+nextSequence();
