@@ -16,6 +16,7 @@ $(document).keypress(function() {
 
 
 function nextSequence() {
+    userClickedPattern = [];
     level++;
     $('#level-title').text('Level ' + level);
 
@@ -46,8 +47,25 @@ function playSound(color) {
 }
 
 $('.btn').click(function() {
-    let userChosenColor = this.id;
+    let userChosenColor = $(this).attr('id');
     userClickedPattern.push(userChosenColor);
+
     pressedButton(userChosenColor);
     playSound(userChosenColor);
+
+    checkAnswer(userClickedPattern.length - 1);
 })
+
+function checkAnswer(currentlevel) {
+    if (gamePattern[currentlevel] === userClickedPattern[currentlevel]) {
+        console.log("success");
+
+        if (userClickedPattern.length === gamePattern.length) {
+            setTimeout(function() {
+                nextSequence();
+            }, 1000);
+        }
+    } else {
+        console.log('wrong');
+    }
+}
