@@ -6,4 +6,4 @@
 
 [Instagram] (https://www.instagram.com/zahidcse98/)
 
-[Github] (https://github.com/zahi
+[Github] (https://github.com/zahidcse98)
