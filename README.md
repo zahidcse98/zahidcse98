@@ -13,4 +13,4 @@ I am Zahid. I am CSE student. I love coding.
 
 #### Profile Visits
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=zahidcse98.zahidcse98&left_color=green&right_color=purple)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=zahidcse98.zahidcse98&left_color=royalblue&right_color=purple)
